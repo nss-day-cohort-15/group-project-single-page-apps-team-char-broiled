@@ -1,0 +1,8 @@
+.container_main {
+
+}
+
+.row,
+.chatBox {
+  min-height: 500px;
+}
