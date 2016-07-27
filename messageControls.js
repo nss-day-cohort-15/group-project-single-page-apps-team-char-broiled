@@ -12,6 +12,7 @@
 // should also expose a function to read
 // all messages, and delete a single message.
 
-var messageControls = (function controlsModule() {
+var Chatty = (function controlsModule(chatty = {}) {
 
-})();
+  return chatty;
+})(Chatty);
