@@ -13,6 +13,54 @@
 // all messages, and delete a single message.
 
 var Chatty = (function controlsModule(chatty = {}) {
+  // Load the saved messages from the JSON file
+  var messages;
+
+  chatty.getSavedMessages(load);
+
+  function load(msg) {
+    messages = msg;
+  }
+
+  var chatBox = document.querySelector('.chatBox');
+
+  chatty.addMessage = function addMessage(id, message) {
+    // Store the message in the private array
+    messages.push(message);
+
+    var messageElement = `
+      <p id="${id}"><span>${id}:</span> ${message}</p>
+      <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
+        X
+      </button>
+    `;
+
+    // Append the new element to the chat box
+    chatBox.innerHTML += messageElement;
+  };
+
+  // Searches for a specific id and deletes that element
+  chatty.removeMessage = function removeMessage(id) {
+    var message = document.getElementById(id);
+    chatBox.removeChild(message);
+  };
+
+  // Magical message reading 🌠
+  chatty.readAllMessages = function readAllMessages() {
+    var utterances = [];
+    messages.forEach(function createUtterances(msg) {
+      var utterance = new SpeechSynthesisUtterance(msg);
+      utterances.push(utterance);
+    });
+
+    utterances.forEach(function speakEachMessage(msg) {
+      window.speechSynthesis.speak(msg);
+    });
+  };
+
+  chatty.TEST = function TEST() {
+    return messages;
+  }
 
   return chatty;
 })(Chatty);
