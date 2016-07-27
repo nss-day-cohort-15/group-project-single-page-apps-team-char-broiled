@@ -30,12 +30,14 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     var messageElement = document.createElement('div');
 
-    var messageElement.innerHTML = `
+    var elementContent = `
       <p id="${id}"><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         X
       </button>
     `;
+
+    messageElement.innerHTML = elementContent;
 
     // Append the new element to the chat box
     chatBox.appendChild(messageElement);
@@ -60,10 +62,6 @@ var Chatty = (function controlsModule(chatty = {}) {
       window.speechSynthesis.speak(msg);
     });
   };
-
-  chatty.TEST = function TEST() {
-    return messages;
-  }
 
   return chatty;
 })(Chatty);
