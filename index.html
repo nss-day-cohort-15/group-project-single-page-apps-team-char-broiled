@@ -2,8 +2,24 @@
 <html>
 <head>
   <title>Chatty</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+    <nav class="navBar">
+      <img id="logo" src="chattyimage.png">
+      <div id="messageArea"> 
+        <input type="textarea" id="messageArea" name="messageArea" placeholder="Tell Me Something">
+      </div>
+      <div id="clearMessage">
+        <input type="button" id="clearButton" name="clearbutton" value="Clear Message Board">
+      </div> 
+      <div id="pref">
+        <input type="checkbox" value="theme" id="theme" name="theme">
+        <label for="theme">Dark Theme</label>
+        <input type="checkbox" value="text" id="text" name="text">
+        <label for="text">Large Text</label>
+      </div>   
+    </nav>
 
   <script src="loadmessages.js"></script>
   <script src="messageControls.js"></script>
