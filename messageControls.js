@@ -28,7 +28,9 @@ var Chatty = (function controlsModule(chatty = {}) {
     // Store the message in the private array
     messages.push(message);
 
-    var messageElement = `
+    var messageElement = document.createElement('div');
+
+    var messageElement.innerHTML = `
       <p id="${id}"><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         X
@@ -36,13 +38,14 @@ var Chatty = (function controlsModule(chatty = {}) {
     `;
 
     // Append the new element to the chat box
-    chatBox.innerHTML += messageElement;
+    chatBox.appendChild(messageElement);
   };
 
   // Searches for a specific id and deletes that element
   chatty.removeMessage = function removeMessage(id) {
     var message = document.getElementById(id);
     chatBox.removeChild(message);
+    messages.splice(id, 1);
   };
 
   // Magical message reading 🌠
