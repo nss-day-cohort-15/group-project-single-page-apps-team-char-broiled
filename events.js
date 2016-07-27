@@ -1,13 +1,9 @@
 
-var message = document.getElementById('messageArea').value;
-// var clearMessages = document.getElementById('clearButton').addEventListener('click', ____);
-
-
-var keyPress = function (e) {
-    if (e.keyCode == 13  && messageArea == "") {
-        console.log("enter something");
-    }
+function enter(e) {
+  if (13 == e.keyCode) {
+    placeholder()
+  }
 }
 
+document.addEventListener("keydown", enter);
 
-var enterButton = document.addEventListener('keydown', keyPress);

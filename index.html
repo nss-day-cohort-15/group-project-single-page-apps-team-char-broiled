@@ -2,25 +2,31 @@
 <html>
 <head>
   <title>Chatty</title>
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
+<body class="container">
+  <div>
     <nav class="navBar">
       <img id="logo" src="chattyimage.png">
-      <div id="messageArea"> 
         <input type="textarea" id="messageArea" name="messageArea" placeholder="Tell Me Something">
-      </div>
-      <div id="clearMessage">
-        <input type="button" id="clearButton" name="clearbutton" value="Clear Message Board">
-      </div> 
+        <button type="button" class="btn btn-primary">Clear Message Board</button>
       <div id="pref">
         <input type="checkbox" value="theme" id="theme" name="theme">
         <label for="theme">Dark Theme</label>
         <input type="checkbox" value="text" id="text" name="text">
         <label for="text">Large Text</label>
-      </div>   
+      </div>
     </nav>
-  <script src="events.js"></script>
+    <form>
+      <div class="form-group">
+        <label for="">Messages</label>
+        <textarea class="form-control chatBox" rows="3"></textarea>
+      </div>
+    </form>
+  </div>
   <script src="loadmessages.js"></script>
+  <script src="events.js"></script>
+  <script src="messageControls.js"></script>
 </body>
 </html>

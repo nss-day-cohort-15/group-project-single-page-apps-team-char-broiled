@@ -1,3 +1,17 @@
-.navBar {
-  
+
+.row,
+.chatBox {
+  min-height: 500px;
+}
+
+#messageArea {
+  min-width: 500px;
+}
+
+#pref {
+  margin-left: 100px;
+}
+
+#text {
+  margin-left: 10px;
 }
