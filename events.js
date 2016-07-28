@@ -49,12 +49,12 @@ function textSize() {
 var textChange = document.getElementsByClassName("textToggle")
   if (document.getElementById("size").checked){
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].style.fontSize = '30px'
+      textChange[i].style.fontSize = '30px';
     }
   }
   else{
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].style.fontSize = '14px'
+      textChange[i].style.fontSize = '14px';
   }
 }};
 
