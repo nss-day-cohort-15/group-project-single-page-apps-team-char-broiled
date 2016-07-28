@@ -30,6 +30,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     var messageElement = document.createElement('div');
 
+    // Message elements must have an ID; the first index should be 0.
     var elementContent = `
       <p id="${id}"><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
