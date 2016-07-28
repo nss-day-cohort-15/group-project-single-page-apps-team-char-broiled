@@ -21,18 +21,20 @@ var Chatty = (function controlsModule(chatty = {}) {
   function load(msg) {
     messages = msg;
 
-  for (i=0; i <messages.length; i++){
-    chatty.addMessage(i, messages[i])
-  
-  console.log(messages)}
+    // Load the saved messages into the DOM
+    for (var i = 0; i < messages.length; i++) {
+      chatty.addMessageToDom(i, messages[i]);
+    }
   }
 
   var chatBox = document.querySelector('.chatBox');
 
-  chatty.addMessage = function addMessage(id, message) {
-    // Store the message in the private array
+  chatty.addMessage = function addMessage(message) {
+    // Add message to private array
     messages.push(message);
+  };
 
+  chatty.addMessageToDom = function addMessageToDom(id, message) {
     var messageElement = document.createElement('div');
 
     // Message elements must have an ID; the first index should be 0.
@@ -54,6 +56,7 @@ var Chatty = (function controlsModule(chatty = {}) {
     var message = document.getElementById(id);
     chatBox.removeChild(message);
     messages.splice(id, 1);
+    console.log(messages);
   };
 
   // Magical message reading 🌠
