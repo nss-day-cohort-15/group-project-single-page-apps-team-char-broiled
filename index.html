@@ -8,9 +8,9 @@
 <body class="container light textToggle">
   <div>
     <nav class="navBar">
-      <img id="logo" src="chattyimage.png">
+      <img id="logo" src="chattylogo1.png">
         <input class="light textToggle" type="textarea" id="messageArea" name="messageArea" placeholder="Tell Me Something">
-        <button type="button" class="btn btn-primary">Clear Message Board</button>
+        <button type="button" onclick="clearBox('chatBox')" class="btn btn-primary">Clear Message Board</button> 
       <div id="pref">
         <input type="checkbox" value="theme" id="theme" name="theme">
         <label for="theme">Dark Theme</label>
@@ -21,7 +21,7 @@
     <form>
       <div class="form-group">
         <label for="">Messages</label>
-        <div class="pre-scrollable form-control chatBox light textToggle" rows="3">
+        <div id="chatBox" class="pre-scrollable form-control chatBox light textToggle" rows="3">
 
         </div>
       </div>
