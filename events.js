@@ -47,14 +47,15 @@ var textChange = document.getElementsByClassName("textToggle")
 function textSize() {
   if (document.getElementById("size").checked){
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.toggle("textLarge")
-      console.log("click")
+      console.log(textChange[i].classList);
+      textChange[i].style.fontSize = '30px';
+      console.log("click");
     }
   }
   else{
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.toggle("textLarge")
-      console.log("unclick")
+      textChange[i].style.fontSize = '14px';
+      console.log("unclick");
   }
 }};
 
