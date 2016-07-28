@@ -36,18 +36,22 @@ function themeColor() {
 
 document.getElementById("theme").addEventListener("click", themeColor);
 
-var textChange = document.getElementsByClassName("textToggle")
+/*Text Change*/
+
 
 function textSize() {
+var textChange = document.getElementsByClassName("textToggle")
   if (document.getElementById("size").checked){
+    console.log(textChange)
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.toggle("textLarge")
+      textChange[i].classList.add("fark")
       console.log("click")
+      console.dir(textChange[i])
     }
   }
   else{
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.toggle("textLarge")
+      textChange[i].classList.remove("fark")
       console.log("unclick")
   }
 }};
