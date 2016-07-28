@@ -15,3 +15,14 @@
 #text {
   margin-left: 10px;
 }
+
+/*Checkbox Changes*/
+
+.dark {
+    background-color: darkgrey;
+    color: white;
+}​
+
+.textLarge {
+  font-size: 20px;
+}
