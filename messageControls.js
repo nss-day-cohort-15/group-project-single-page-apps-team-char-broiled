@@ -41,7 +41,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p style="display:inline"><span>${moment().format('h:mm:ss')}:</span>${message.user}: ${message.message}</p>
+      <p style="display:inline"><span style="font-weight:bold">${moment().format('h:mm:ss')}: ${message.user}:</span> ${message.message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
@@ -65,7 +65,7 @@ var Chatty = (function controlsModule(chatty = {}) {
   chatty.readAllMessages = function readAllMessages() {
     var utterances = [];
     messages.forEach(function createUtterances(msg) {
-      var utterance = new SpeechSynthesisUtterance(msg);
+      var utterance = new SpeechSynthesisUtterance(msg.message);
       utterances.push(utterance);
     });
 

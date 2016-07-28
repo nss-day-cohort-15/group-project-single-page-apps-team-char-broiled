@@ -2,8 +2,13 @@
 function enter(e) {
   if (13 == e.keyCode) {
     var userInput = document.getElementById("messageArea");
-    Chatty.addMessage(userInput.value);
-    Chatty.addMessageToDom(Chatty.getNextId(), userInput.value, selectedUser)
+    var selectedUser = document.querySelector("input[name='user']:checked").value;
+    var message = {
+      user: selectedUser,
+      message: userInput.value
+    };
+    Chatty.addMessage(message.message);
+    Chatty.addMessageToDom(Chatty.getNextId(), message);
     userInput.value = '';
   }
 }

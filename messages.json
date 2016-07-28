@@ -10,10 +10,15 @@
     },
     {
       "user": "Matt",
-      "message": "👌👀👌👀 good shit good sHit👌 thats ✔ some good👌shit right there 💯",
+      "message": "👌👀👌👀 good shit good sHit👌 thats ✔ some good👌shit right there 💯 "
+    },
+    {
+      "user": "Scott",
+      "message": "💩"
     },
     {
       "user": "Jamie",
       "message": "how do I javascript?"
     }
+  ]
 }
