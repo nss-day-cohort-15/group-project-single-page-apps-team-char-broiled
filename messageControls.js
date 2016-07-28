@@ -73,7 +73,7 @@ var Chatty = (function controlsModule(chatty = {}) {
   };
 
   chatty.getNextId = function getNextId() {
-    return messages.length;
+    return messages.length - 1;
   };
 
   return chatty;
