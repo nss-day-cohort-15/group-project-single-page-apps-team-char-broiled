@@ -40,7 +40,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p><span>${id}:</span> ${message}</p>
+      <p style="display:inline"><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         X
       </button>
