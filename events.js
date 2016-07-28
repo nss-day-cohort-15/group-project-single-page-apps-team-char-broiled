@@ -4,6 +4,8 @@ function enter(e) {
     var userInput = document.getElementById("messageArea")
     Chatty.addMessage(userInput.value)
     Chatty.addMessageToDom(Chatty.getNextId(), userInput.value)
+    clearButton.removeAttribute("disabled")
+    console.dir(clearButton)
   }
 }
 
@@ -20,10 +22,15 @@ document.addEventListener("keydown", enter);
 //     });
 // });​
 
-function clearBox(chatBox)
-{
-    document.getElementById(chatBox).innerHTML = "";
-}
+// function clearBox(chatBox)
+// {
+//     document.getElementById(chatBox).innerHTML = "";
+// }
+
+clearButton.addEventListener("click", function() {
+    chatBox.innerHTML = "";
+    clearButton.setAttribute("disabled", true);
+});
 
 var colorChange = document.getElementsByClassName("light")
 
