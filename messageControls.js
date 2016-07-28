@@ -19,7 +19,7 @@ var Chatty = (function controlsModule(chatty = {}) {
   chatty.getSavedMessages(load);
 
   function load(msg) {
-    messages = msg;
+    messages = msg.messages;
 
     // Load the saved messages into the DOM
     for (var i = 0; i < messages.length; i++) {
@@ -41,7 +41,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p style="display:inline"><span>${moment().format('h:mm:ss')}:</span> ${message}</p>
+      <p style="display:inline"><span style="font-weight:bold">${moment().format('h:mm:ss')}: ${message.user}:</span> ${message.message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
@@ -64,8 +64,9 @@ var Chatty = (function controlsModule(chatty = {}) {
   // Magical message reading 🌠
   chatty.readAllMessages = function readAllMessages() {
     var utterances = [];
-    messages.forEach(function createUtterances(msg) {
-      var utterance = new SpeechSynthesisUtterance(msg);
+    var thingsToSpeak = messages;
+    thingsToSpeak.forEach(function createUtterances(msg) {
+      var utterance = new SpeechSynthesisUtterance(msg.message);
       utterances.push(utterance);
     });
 
@@ -76,6 +77,10 @@ var Chatty = (function controlsModule(chatty = {}) {
 
   chatty.getNextId = function getNextId() {
     return messages.length - 1;
+  };
+
+  chatty.deleteMessages = function removeMessages() {
+    messages = [];
   };
 
   return chatty;
