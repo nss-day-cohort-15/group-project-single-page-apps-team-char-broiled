@@ -4,6 +4,7 @@ function enter(e) {
     var userInput = document.getElementById("messageArea")
     Chatty.addMessage(userInput.value)
     Chatty.addMessageToDom(Chatty.getNextId(), userInput.value)
+    userInput.value = ''
   }
 }
 
