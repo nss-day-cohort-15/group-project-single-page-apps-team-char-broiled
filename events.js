@@ -25,7 +25,6 @@ function clearBox(chatBox)
     document.getElementById(chatBox).innerHTML = "";
 }
 
-
 var colorChange = document.getElementsByClassName("light")
 
 function themeColor() {
