@@ -64,7 +64,8 @@ var Chatty = (function controlsModule(chatty = {}) {
   // Magical message reading 🌠
   chatty.readAllMessages = function readAllMessages() {
     var utterances = [];
-    messages.forEach(function createUtterances(msg) {
+    var thingsToSpeak = messages;
+    thingsToSpeak.forEach(function createUtterances(msg) {
       var utterance = new SpeechSynthesisUtterance(msg.message);
       utterances.push(utterance);
     });
@@ -76,6 +77,10 @@ var Chatty = (function controlsModule(chatty = {}) {
 
   chatty.getNextId = function getNextId() {
     return messages.length - 1;
+  };
+
+  chatty.deleteMessages = function removeMessages() {
+    messages = [];
   };
 
   return chatty;

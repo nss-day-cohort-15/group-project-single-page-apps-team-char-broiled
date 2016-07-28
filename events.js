@@ -7,7 +7,8 @@ function enter(e) {
       user: selectedUser,
       message: userInput.value
     };
-    Chatty.addMessage(message.message);
+    console.log(message.message);
+    Chatty.addMessage(message);
     Chatty.addMessageToDom(Chatty.getNextId(), message);
     userInput.value = '';
     clearButton.removeAttribute("disabled")
@@ -35,6 +36,7 @@ document.addEventListener("keydown", enter);
 clearButton.addEventListener("click", function() {
     chatBox.innerHTML = "";
     clearButton.setAttribute("disabled", true);
+    Chatty.deleteMessages();
 });
 
 var colorChange = document.getElementsByClassName("light")
