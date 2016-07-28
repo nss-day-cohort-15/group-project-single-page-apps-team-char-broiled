@@ -19,7 +19,7 @@ var Chatty = (function controlsModule(chatty = {}) {
   chatty.getSavedMessages(load);
 
   function load(msg) {
-    messages = msg;
+    messages = msg.messages;
 
     // Load the saved messages into the DOM
     for (var i = 0; i < messages.length; i++) {
@@ -41,7 +41,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p style="display:inline"><span>${moment().format('h:mm:ss')}:</span> ${message}</p>
+      <p style="display:inline"><span>${moment().format('h:mm:ss')}:</span>${message.user}: ${message.message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>

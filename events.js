@@ -1,9 +1,10 @@
 
 function enter(e) {
   if (13 == e.keyCode) {
-    var userInput = document.getElementById("messageArea")
-    Chatty.addMessage(userInput.value)
-    Chatty.addMessageToDom(Chatty.getNextId(), userInput.value)
+    var userInput = document.getElementById("messageArea");
+    Chatty.addMessage(userInput.value);
+    Chatty.addMessageToDom(Chatty.getNextId(), userInput.value, selectedUser)
+    userInput.value = '';
   }
 }
 

@@ -1,7 +1,19 @@
-[
-  "What's up Cohort 15!",
-  "This is a pretty sweet app.",
-  "👌👀👌👀 good shit good sHit👌 thats ✔ some good👌shit right there 💯",
-  "💩",
-  "how do I javascript?"
-]
+{
+  "messages": [
+    {
+      "user": "Edgar",
+      "message": "What's up Cohort 15!"
+    },
+    {
+      "user": "Jamie",
+      "message": "This is a pretty sweet app."
+    },
+    {
+      "user": "Matt",
+      "message": "👌👀👌👀 good shit good sHit👌 thats ✔ some good👌shit right there 💯",
+    },
+    {
+      "user": "Jamie",
+      "message": "how do I javascript?"
+    }
+}
