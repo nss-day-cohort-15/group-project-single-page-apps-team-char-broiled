@@ -64,5 +64,9 @@ var Chatty = (function controlsModule(chatty = {}) {
     });
   };
 
+  chatty.getNextId = function getNextId() {
+    return messages.length;
+  };
+
   return chatty;
 })(Chatty);
