@@ -30,12 +30,15 @@ var Chatty = (function controlsModule(chatty = {}) {
 
     var messageElement = document.createElement('div');
 
-    var messageElement.innerHTML = `
+    // Message elements must have an ID; the first index should be 0.
+    var elementContent = `
       <p id="${id}"><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         X
       </button>
     `;
+
+    messageElement.innerHTML = elementContent;
 
     // Append the new element to the chat box
     chatBox.appendChild(messageElement);
@@ -61,9 +64,9 @@ var Chatty = (function controlsModule(chatty = {}) {
     });
   };
 
-  chatty.TEST = function TEST() {
-    return messages;
-  }
+  chatty.getNextId = function getNextId() {
+    return messages.length;
+  };
 
   return chatty;
 })(Chatty);

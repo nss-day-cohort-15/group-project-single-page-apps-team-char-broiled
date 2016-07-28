@@ -1,4 +1,4 @@
-var Chatty = (function messageMoudle(chatty = {}) {
+var Chatty = (function messageModule(chatty = {}) {
   messages = [];
 
   chatty.getSavedMessages = function getMessages(callback) {
