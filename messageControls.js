@@ -42,7 +42,7 @@ var Chatty = (function controlsModule(chatty = {}) {
     var elementContent = `
       <p style="display:inline"><span>${moment().format('h:mm:ss')}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
-        X
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
     `;
 
