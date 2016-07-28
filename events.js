@@ -48,20 +48,15 @@ document.getElementById("theme").addEventListener("click", themeColor);
 function textSize() {
 var textChange = document.getElementsByClassName("textToggle")
   if (document.getElementById("size").checked){
-    console.log(textChange)
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.add("fark")
-      console.log("click")
-      console.dir(textChange[i])
+      textChange[i].style.fontSize = '30px'
     }
   }
   else{
     for (var i = 0; i < textChange.length; i++){
-      textChange[i].classList.remove("fark")
-      console.log("unclick")
+      textChange[i].style.fontSize = '14px'
   }
 }};
 
 document.getElementById("size").addEventListener("click", textSize);
-console.dir(document.getElementById("size"))
 
