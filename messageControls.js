@@ -36,10 +36,11 @@ var Chatty = (function controlsModule(chatty = {}) {
 
   chatty.addMessageToDom = function addMessageToDom(id, message) {
     var messageElement = document.createElement('div');
+    messageElement.id = id;
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p class="textToggle" id="${id}"><span>${id}:</span> ${message}</p>
+      <p><span>${id}:</span> ${message}</p>
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         X
       </button>
@@ -56,7 +57,6 @@ var Chatty = (function controlsModule(chatty = {}) {
     var message = document.getElementById(id);
     chatBox.removeChild(message);
     messages.splice(id, 1);
-    console.log(messages);
   };
 
   // Magical message reading 🌠
@@ -73,7 +73,7 @@ var Chatty = (function controlsModule(chatty = {}) {
   };
 
   chatty.getNextId = function getNextId() {
-    return messages.length-1;
+    return messages.length - 1;
   };
 
   return chatty;
