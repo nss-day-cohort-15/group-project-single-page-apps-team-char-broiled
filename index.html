@@ -5,23 +5,23 @@
   <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body class="container">
+<body class="container light textToggle">
   <div>
     <nav class="navBar">
       <img id="logo" src="chattyimage.png">
-        <input type="textarea" id="messageArea" name="messageArea" placeholder="Tell Me Something">
+        <input class="light textToggle" type="textarea" id="messageArea" name="messageArea" placeholder="Tell Me Something">
         <button type="button" class="btn btn-primary">Clear Message Board</button>
       <div id="pref">
         <input type="checkbox" value="theme" id="theme" name="theme">
         <label for="theme">Dark Theme</label>
-        <input type="checkbox" value="text" id="text" name="text">
+        <input type="checkbox" value="text" id="size" name="text">
         <label for="text">Large Text</label>
       </div>
     </nav>
     <form>
       <div class="form-group">
         <label for="">Messages</label>
-        <div class="pre-scrollable form-control chatBox" rows="3">
+        <div class="pre-scrollable form-control chatBox light textToggle" rows="3">
 
         </div>
       </div>
