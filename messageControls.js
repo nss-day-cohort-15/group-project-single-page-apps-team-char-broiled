@@ -36,6 +36,7 @@ var Chatty = (function controlsModule(chatty = {}) {
 
   chatty.addMessageToDom = function addMessageToDom(id, message) {
     var messageElement = document.createElement('div');
+    messageElement.style.margin = '5px';
     messageElement.id = id;
 
     // Message elements must have an ID; the first index should be 0.
@@ -44,6 +45,7 @@ var Chatty = (function controlsModule(chatty = {}) {
       <button type="button" onclick="Chatty.removeMessage('${id}')" class="btn btn-danger">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
+      <hr>
     `;
 
     messageElement.innerHTML = elementContent;
