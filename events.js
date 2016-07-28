@@ -1,3 +1,4 @@
+
 function enter(e) {
   if (13 == e.keyCode) {
     var userInput = document.getElementById("messageArea")
@@ -6,7 +7,6 @@ function enter(e) {
 }
 
 document.addEventListener("keydown", enter);
-
 
 /*Checkbox Color Changes*/
 
@@ -53,3 +53,4 @@ function textSize() {
 
 document.getElementById("size").addEventListener("click", textSize);
 console.dir(document.getElementById("size"))
+

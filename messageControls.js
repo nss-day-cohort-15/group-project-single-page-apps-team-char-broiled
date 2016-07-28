@@ -20,6 +20,11 @@ var Chatty = (function controlsModule(chatty = {}) {
 
   function load(msg) {
     messages = msg;
+
+  for (i=0; i <messages.length; i++){
+    chatty.addMessage(i, messages[i])
+  
+  console.log(messages)}
   }
 
   var chatBox = document.querySelector('.chatBox');
