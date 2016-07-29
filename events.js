@@ -9,7 +9,7 @@ function enter(e) {
     };
 
     // Top secret easter egg function
-    Chatty.detectEasterEgg();
+    Chatty.detectEasterEgg(message);
     Chatty.addMessage(message);
     Chatty.addMessageToDom(Chatty.getNextId(), message);
     userInput.value = '';

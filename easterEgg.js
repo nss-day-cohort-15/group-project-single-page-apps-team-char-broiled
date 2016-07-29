@@ -8,8 +8,8 @@ var Chatty = (function easterEggModule(chatty = {}) {
     textBox.classList += 'scott-mode';
   }
 
-  chatty.detectEasterEgg = function detectEasterEgg(message) {
-    if (message.toLowerCase() === 'scott mode') {
+  chatty.detectEasterEgg = function detectEasterEgg(msgObj) {
+    if (msgObj.message === 'scott mode') {
       activateEasterEgg();
     }
   };
