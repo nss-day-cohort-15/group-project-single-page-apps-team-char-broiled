@@ -1,6 +1,6 @@
 # Chatty Group Project
 
-##
+#
 [Demo](https://nss-day-cohort-15.github.io/group-project-single-page-apps-team-char-broiled)
 
 ## Setup
