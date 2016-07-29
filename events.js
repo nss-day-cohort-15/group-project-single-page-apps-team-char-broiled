@@ -7,7 +7,9 @@ function enter(e) {
       user: selectedUser,
       message: userInput.value
     };
-    console.log(message.message);
+
+    // Top secret easter egg function
+    Chatty.detectEasterEgg();
     Chatty.addMessage(message);
     Chatty.addMessageToDom(Chatty.getNextId(), message);
     userInput.value = '';
