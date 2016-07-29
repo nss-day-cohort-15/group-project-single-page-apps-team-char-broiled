@@ -21,3 +21,8 @@
     background-color: #767676;
     color: white;
 }​
+
+.scott-mode {
+  background: url('http://nashvillesoftwareschool.com/images/instructors/scott.jpg');
+  background-size: cover;
+}
