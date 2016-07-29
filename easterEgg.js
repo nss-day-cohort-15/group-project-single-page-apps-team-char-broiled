@@ -3,15 +3,21 @@
 // in our kick ass web application.
 
 var Chatty = (function easterEggModule(chatty = {}) {
+  var textBox = document.getElementById('chatBox');
+
   function activateEasterEgg() {
-    var textBox = document.querySelector('.chatBox');
     textBox.classList += ' scott-mode';
   }
 
   chatty.detectEasterEgg = function detectEasterEgg(msgObj) {
     if (msgObj.message === 'scott mode') {
       activateEasterEgg();
+      msgObj.message = 'Teach me how to program like u senpai 💯';
+      msgObj.user = 'Scott';
+      msgObj.message += `<img src="http://cultofthepartyparrot.com/parrots/shuffleparrot.gif">`;
     }
+
+    return msgObj;
   };
 
   return chatty;

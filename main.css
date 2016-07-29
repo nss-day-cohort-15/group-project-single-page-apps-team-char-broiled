@@ -1,3 +1,11 @@
+.scott-mode {
+  background: url('http://nashvillesoftwareschool.com/images/instructors/scott.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+}
+
 .row,
 .chatBox {
   min-height: 500px;
@@ -22,7 +30,4 @@
     color: white;
 }​
 
-.scott-mode {
-  background: url('http://nashvillesoftwareschool.com/images/instructors/scott.jpg');
-  background-size: cover;
-}
+
