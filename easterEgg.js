@@ -14,7 +14,7 @@ var Chatty = (function easterEggModule(chatty = {}) {
       activateEasterEgg();
       msgObj.message = 'Teach me how to program like u senpai 💯';
       msgObj.user = 'Scott';
-      msgObj.message += `<img src="https://cultofthepartyparrot.com/parrots/shuffleparrot.gif">`;
+      msgObj.message += `<img src="http://cultofthepartyparrot.com/parrots/shuffleparrot.gif">`;
     }
 
     return msgObj;
