@@ -5,7 +5,7 @@
 var Chatty = (function easterEggModule(chatty = {}) {
   function activateEasterEgg() {
     var textBox = document.querySelector('.chatBox');
-    textBox.classList += 'scott-mode';
+    textBox.classList += ' scott-mode';
   }
 
   chatty.detectEasterEgg = function detectEasterEgg(msgObj) {
